@@ -1,0 +1,21 @@
+{
+  "name": "webpack-4",
+  "version": "1.0.0",
+  "description": "prueba de webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "webpack",
+    "js"
+  ],
+  "author": "fercc1097",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
