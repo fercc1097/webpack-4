@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack --entry ./index --output ./bundle.js --mode development",
+    "build:local": "webpack --mode production",
+    "build:external": "webpack --config ./external/webpackexternal.config.js",
+    "build:multi": "webpack --config ./multi-entry-points/webpack.config.js",
+    "build:css": "webpack --config ./css-style-loader/webpack.config.js"
   },
   "keywords": [
     "webpack",
@@ -15,6 +19,8 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "css-loader": "^4.2.2",
+    "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
