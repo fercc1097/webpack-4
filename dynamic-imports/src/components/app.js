@@ -12,7 +12,10 @@ console.log(data);
 
 function App(){
     const [loaderList, setLoaderList] = useState([]);
-    function handleClick(){
+    async function handleClick(){
+        const {alerta} = await import('./alert');
+        console.log('alerta');
+        alerta('OMG este modulo ha cargado dinamicamente');
         setLoaderList(data.loaders);
     }
     return (

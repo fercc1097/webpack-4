@@ -11,7 +11,9 @@ module.exports = {
     mode: 'production',
     output: {
         path: path.resolve(__dirname,'dist'),
-        filename: `js/[name].js`
+        filename: `js/[name].js`,
+        publicPath: 'dist/',
+        chunkFilename: 'js/[id].[chunkhash].js'
     },
 
     module:{
@@ -81,7 +83,7 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
-            chunkFilename: 'css/{id}.css'
+            chunkFilename: 'css/[id].[chunkhash].css'
         }),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
